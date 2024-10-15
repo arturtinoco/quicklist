@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 22.5rem; /* 360px */
+    max-width: 24.375rem; /* 390px */
+
+    margin-inline: auto;
+
+    & header {
+        display: none;
+    }
+    
+    & .back-button {
+        display: inline-block;
+        font: var(--link);
+        color: var(--color-brand);
+        margin-top: 4.875rem;
+        margin-left: 2rem;
+    }
+
+    & h1 {
+        font: var(--title);
+        width: fit-content;
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+}
