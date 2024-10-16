@@ -52,6 +52,7 @@ form {
             border: none;
             border-radius: .75rem;
 
+            cursor: pointer;
             transition: background-color 150ms ease-out;
 
             &:hover {

@@ -13,10 +13,18 @@ main {
     
     & .back-button {
         display: inline-block;
+
         font: var(--link);
         color: var(--color-brand);
+
         margin-top: 4.875rem;
         margin-left: 2rem;
+
+        transition: color 150ms ease;
+
+        &:hover {
+            color: var(--color-brand-hover);
+        }
     }
 
     & h1 {
