@@ -22,8 +22,10 @@ main {
 
         transition: color 150ms ease;
 
-        &:hover {
-            color: var(--color-brand-hover);
+        &:hover,
+        &:focus,
+        &:focus-within {
+            color: var(--color-brand-hover);            outline: none;
         }
     }
 
