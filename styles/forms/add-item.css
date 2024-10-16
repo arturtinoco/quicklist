@@ -57,7 +57,7 @@ form {
 
             &:hover,
             &:focus,
-            &>:focus-within {
+            &:focus-within {
                 background-color: var(--color-brand-hover);
                 outline: none;
             }

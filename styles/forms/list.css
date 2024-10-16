@@ -31,21 +31,18 @@ form {
                 margin-right: auto;
             }
 
-            & svg {
+            & img {
                 display: flex;
                 width: 1rem;
                 height: 1rem;
                 margin-right: .5rem;
+
+                transition: filter 150ms ease-in;
                 cursor: pointer;
-                
-                & path {
-                    transition: stroke 100ms ease-in;
-                }
+            
 
                 &:hover {
-                    & path {
-                        stroke: var(--color-danger);
-                    }
+                    filter: invert(28%) sepia(93%) saturate(1450%) hue-rotate(328deg) brightness(84%) contrast(88%);
                 }
             }
         }
