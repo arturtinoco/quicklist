@@ -18,6 +18,7 @@
     --label: 600 1rem/1.25rem var(--font-family);
     --paragraph: 500 1rem/1.25rem var(--font-family);
     --link: 500 .875rem/1rem var(--font-family);
+    --error: 600 .875rem/1rem var(--font-family);
 }
 
 * {

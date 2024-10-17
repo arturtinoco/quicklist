@@ -4,16 +4,36 @@ const user_input = document.getElementById("new-item")
 const submit_button = document.querySelector('button[type="submit"]')
 
 const items_list = document.getElementById("items-list")
-const item = document.getElementsByClassName("item")
-const checkbox = document.querySelector('input[type="checkbox"]')
 const all_remove_icons = document.querySelectorAll("li.item > img")
+
+const error = document.querySelector("div.add-item > p")
 
 // Call submit button events
 form.onsubmit = (event) => {
     event.preventDefault()
 
+    // Error managment
+    if (user_input.value == "") {
+        user_input.classList.add("error-border")
+        error.classList.remove("hidden")
+        
+        submit_button.blur()
+        
+        user_input.addEventListener("keypress", () => {
+            user_input.classList.remove("error-border")
+            error.classList.add("hidden")
+        })
+
+        return
+    } else {
+        user_input.classList.remove("error-border")
+        error.classList.add("hidden")
+    }
+
+
     // Add typed input as a list item
     addItem(user_input.value)
+    user_input.value = ""
 
     // Unfocus button after use
     submit_button.blur()
