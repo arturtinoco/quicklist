@@ -61,7 +61,24 @@ all_remove_icons.forEach((selected_element) => {
 // Remove item from list (ul#items-list) when clicked on it's respective trash-bin icon
 function deleteEvent(selected_element) {
     selected_element.addEventListener("click", (event) => {
-        event.target.closest("li.item").remove()
+        const warning_box = document.getElementById("warning-wrapper")
+        const warning_message = warning_box.querySelector("p")
+        const removed_item = event.target.closest("li.item")
+        const close_icon = document.getElementById("close-icon")
+
+        // Display item's name on warning message
+        warning_message.querySelector("span.removed").textContent = removed_item.querySelector("span").textContent
+
+        // Display full warning message after item being removed
+        warning_box.classList.remove("hidden")
+
+        // Remove it from list
+        removed_item.remove()
+
+        // Close warning message when clicked on it's X icon
+        close_icon.addEventListener("click", () => {
+            warning_box.classList.add("hidden")
+        })
 
         console.log("deletou :(")
     })

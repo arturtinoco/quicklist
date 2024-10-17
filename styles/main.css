@@ -62,7 +62,7 @@ main {
                 fill: var(--always-white);
             }
 
-            &:nth-child(3) {
+            &#close-icon {
                 margin-left: auto;
                 cursor: pointer;
                 transition: scale 150ms ease-in;
