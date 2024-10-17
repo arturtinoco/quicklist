@@ -48,3 +48,12 @@ form {
         }
     }
 }
+
+@media (width > 44.5rem) {
+    & form {
+
+        & ul[role="list"] {
+            width: 100%;
+        }
+    }
+}

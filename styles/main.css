@@ -82,3 +82,35 @@ main {
         }
     }
 }
+
+@media (width > 44.5rem) {
+    & main {
+        max-width: 39.25rem;
+
+         & header {
+            display: block;
+
+            width: 9.75rem;
+            height: 2.5rem;
+            margin-inline: auto;
+            margin-top: 1.5rem;
+         }
+
+         & .back-button {
+            margin-top: 3.875rem;
+            margin-left: 0;
+         }
+
+         & h1 {
+            margin-left: 0;
+         }
+
+         & #warning-wrapper {
+
+            & #warning {
+                min-width: 39.5rem;
+                max-width: 39.5rem;
+             }
+         }
+    }
+}
